@@ -3,7 +3,7 @@ import CardGrid from '../components/cardd'; // Assuming CardGrid is for desktop
 import MobileGrid from '../components/mobilegrid'; // Import your MobileGrid component
 import search from "../assets/search.svg";
 import next from '../assets/next.svg';
-import father from '../assets/father.svg'; // Import the father image
+import father from '../assets/father.png'; // Import the father image
 import Navbarrr from '../components/navv';
 
 const Qvault = () => {

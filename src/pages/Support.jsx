@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../assets/hero.svg'; // Replace with your actual image path
+import img from '../assets/hero.png'; // Replace with your actual image path
 import Navbarr from '../components/navdeux';
 import Icons from "../components/Icons.js";
 
