@@ -208,7 +208,7 @@ export default function CoursesPage() {
       const courseHasAccess = hasAccess(course.id);
       return {
         id: course.id,
-        label: decode(course?.title || ""),
+        label: typeof course?.title === "string" ? decode(course.title) : "",
         image: course.thumbnail,
         description: course.description || "",
         isLocked: !courseHasAccess,

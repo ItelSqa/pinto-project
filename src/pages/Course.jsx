@@ -28,7 +28,7 @@ export default function Course() {
   const { data: courseDetailsResponse, isLoading: isGettingCourseDetails } =
     useQuery({
       queryKey: ["course-details", `id=${courseId}`],
-      queryFn: () => apiService.get(`/cct/v1/courses/${courseId}`),
+      queryFn: () => apiService.get(`/cct/v1/courses`),
     });
 
   const courseDetails = courseDetailsResponse?.data;

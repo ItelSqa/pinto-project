@@ -172,7 +172,7 @@ export default function CurseUpsale() {
                 alt="Lesson plan preview"
                 className="object-contain self-stretch my-auto rounded-2xl aspect-[1.77] min-w-[240px] w-[794px] max-md:max-w-full block"
               />
-              <section className="flex flex-col self-stretch my-auto min-w-[240px] w-[360px]">
+              <section className="flex flex-col self-stretch my-auto min-w-[240px] max-w-lg-[360px] max-w-sm">
                 <div className="flex flex-col w-full">
                   <h3 className="text-lg font-semibold tracking-wide leading-none text-stone-400">
                     Browse Lesson Plan
@@ -423,7 +423,7 @@ export default function CurseUpsale() {
         ))}
       </nav>
 
-      <main className="tab-content">{renderTabContent()}</main>
+      <main className="tab-content w-full max-w-screen-xl">{renderTabContent()}</main>
 
       {/* about the course */}
 
