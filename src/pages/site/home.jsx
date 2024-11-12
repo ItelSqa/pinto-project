@@ -354,31 +354,31 @@ function Home() {
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                  the Same Page: 
+                 the same page: 
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                  My Husband's 
+                  my husband's 
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                 Journey 
+                  journey 
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                  into 
+                  into
                 </h2>
                 <h3
                   className={`${
@@ -563,8 +563,8 @@ function Home() {
             </div>
             <img src={offereingOne} alt="" />
             <div
-              className={`flex flex-col justify-between items-center  px-4 py-4 w-[90%] mx-auto min-h-96 ${
-                isHover ? "text-textPrimary" : "text-[#376489]"
+              className={`flex flex-col justify-between items-center px-4 py-4 bg-[#F1E1E4] w-[90%] mx-auto min-h-96 ${
+                isHover2 ? "bg-[#c2d5e4d3]" : "bg-[#F1E1E4]"
               }`}
             >
               <p className="font-medium text-base leading-[23px]  font-montserrat text-[#274C69]">
