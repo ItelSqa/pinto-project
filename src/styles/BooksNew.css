@@ -1,0 +1,35 @@
+.section-1 {
+    background-image: url("../assets/frame.png");
+}
+
+.midtext-color {
+    color: #376489;
+}
+
+.section-1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+    background-color: #c5dae8; /* Adjust color and opacity */
+    z-index: 0; /* Ensure it’s behind other content */
+}
+
+.section-1 > * {
+    position: relative;
+    z-index: 10; /* Content stays above overlay */
+}
+
+.section-5::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+    background-color: #F1E1E4; /* Adjust color and opacity */
+    z-index: 0; /* Ensure it’s behind other content */
+}
+
+.section-5 > * {
+    position: relative;
+    z-index: 10; /* Content stays above overlay */
+}

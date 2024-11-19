@@ -25,7 +25,7 @@ const navItems = [
       { id: 6.2, title: "Coaching", path: "/work-with-me/coaching" },
     ],
   },
-  { id: 7, title: "BLOG", path: "/blogs" },
+  { id: 7, title: "CONTACT", path: "/contact" },
   { id: 8, title: "LOGIN", path: "/login" },
   { id: 9, title: "SIGN UP", path: "/courses-info", isButton: true },
 ];
@@ -77,13 +77,16 @@ function Header() {
               <Link
                 to={item.path}
                 className={`${
-                  item.isButton
-                    ? "bg-blue-500 text-white px-4 py-2 rounded-md bg-[#376489]"
+                  item.title === "LOGIN"
+                    ? "border-2 rounded-md border-[#376489] px-4 py-2 text-[15px]"  // Custom style for LOGIN button
+                    : item.isButton
+                    ? "bg-blue-500 text-white px-4 py-2 rounded-md bg-[#376489]" // Existing style for SIGN UP button
                     : "text-gray-600 hover:text-gray-900"
                 } font-raleway`}
               >
                 {item.title}
               </Link>
+
             )}
           </Fragment>
         ))}

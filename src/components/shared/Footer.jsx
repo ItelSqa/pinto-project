@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { award1, award2 } from "../../assets";
-
+import footerLogo from "../../assets/footerLogo.png";
+import { useState, useEffect } from "react";
 import Icons from "../Icons";
+
 const footerItems = [
   { name: "Contact Us", link: "/contact" },
   { name: "Resources", link: "/publicResources" },
@@ -37,8 +39,24 @@ const courses = [
 ];
 
 function Footer() {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+  // Function to update state based on window width
+  const handleResize = () => {
+    setIsDesktop(window.innerWidth >= 768);
+  };
+
+  // Set up event listener on mount and cleanup on unmount
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    
+    // Cleanup function to remove event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <section className="px-8 py-10 bg-white md:px-2">
+    <>
+    {isDesktop ? (
+      <section className="px-8 py-10 bg-white md:px-2">
       <section className="flex flex-col items-start justify-between p-8 md:flex-row gap-7 md:gap-5 cContainer md:p-2">
         {/* Logo and Social Links */}
         <div className="md:basis-[25%] mb-5 md:mb-0 p-4 md:p-0 flex-col space-y-4 hidden lg:block">
@@ -115,6 +133,14 @@ function Footer() {
         © 2024 Stephanie Pinto. All rights reserved.
       </div>
     </section>
+          ):(
+            <footer className="w-full flex justify-around items-center bg-[#C1989F] text-[#FAF5F0] text-center py-4 text-[20px] font-semibold px-3 z-10">
+              <img src={footerLogo} width={80} height={80} />
+              <span className="text-xs">© 2024 Stephanie Pinto. All rights reserved.</span>
+            </footer>
+          )
+        }
+    </>
   );
 }
 

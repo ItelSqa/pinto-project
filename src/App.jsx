@@ -34,7 +34,6 @@ import {
   Blogs,
   Speaking,
   Blogsdetails,
-  Books,
   Coaching,
   CoachingDetails,
   NotFound,
@@ -44,7 +43,10 @@ import {
   About,
 } from "./pages";
 // import Home from "./pages/home";
+
 import StripeProvider from "./components/payments/StripeProvider";
+import Contact from "./pages/site/Contact";
+import BooksNew from "./pages/site/BooksNew";
 
 function App() {
   const dispatch = useDispatch();
@@ -104,7 +106,7 @@ function Layout() {
         <Route path="/courses-info" element={<SiteCourses />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogdetails" element={<Blogsdetails />} />
-        <Route path="/books" element={<Books />} />
+        <Route path="/books" element={<BooksNew />} />
         <Route path="/work-with-me/coaching" element={<Coaching />} />
         <Route path="/coachingDetails" element={<CoachingDetails />} />
         <Route path="/work-with-me/speaking" element={<Speaking />} />
@@ -112,6 +114,7 @@ function Layout() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/podcast" element={<Podcast />} />
         <Route path="/site-resources" element={<PublicResources />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
 
         {/*Protected  Routes */}

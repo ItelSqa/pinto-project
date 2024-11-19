@@ -1,0 +1,50 @@
+.contact-upper-image {
+    background-image: url("../assets/ContactMePageImage.png");
+    object-fit: cover;
+}
+
+.ladyImg {
+    top: 40vh;
+}
+
+.aboveFooterContactMeSection {
+    background-image: url("../assets/AboveFooterContactMe.png");
+    z-index: 15;
+    object-fit: cover;
+}
+
+  @media (min-width: 400px) {
+    .form-position {
+     top: 6vh !important;
+    }
+  }
+
+  @media (min-width: 425px) {
+    .form-position {
+      top: 8vh !important;
+    }
+  }
+
+  @media (min-width: 440px) {
+    .form-position {
+      top: 12vh !important;
+    }
+  }
+
+  @media (min-width: 485px) {
+    .form-position {
+      top: 20vh !important;
+    }
+  }
+
+  @media (min-width: 526px) {
+    .form-position {
+      top: 25vh !important;
+    }
+  }
+
+  @media (min-width: 570px) {
+    .form-position {
+      top: 40vh !important;
+    }
+  }

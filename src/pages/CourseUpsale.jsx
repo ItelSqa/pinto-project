@@ -1,9 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Icons from "../../src/components/Icons";
 import { apiService } from "../hooks/axios";
 import { useQuery } from "@tanstack/react-query";
 import courses from "../data/coursedata";
 import { useState } from "react";
+import { Cookies } from "react-cookie";
+
+const cookies = new Cookies();
 
 const navigationItems = [
   { text: "Course Info", id: "AboutTheCourse" },
@@ -151,6 +154,15 @@ export default function CurseUpsale() {
   // });
 
   // console.log(courseDetailsResponse);
+  const navigate = useNavigate();
+  const handleBuyNow = () => {
+    if (!cookies.get("jwtToken")) {
+      navigate("/signup-checkout");
+    } else {
+      navigate("/checkout");
+    }
+  };
+
 
   const renderTabContent = () => {
 
@@ -167,10 +179,10 @@ export default function CurseUpsale() {
 
             <main className="flex z-0 flex-wrap gap-10 justify-between items-center mt-4 w-full max-md:max-w-full">
               <img
-                loading="lazy"
-                src={Course?.introVid}
-                alt="Lesson plan preview"
-                className="object-contain self-stretch my-auto rounded-2xl aspect-[1.77] min-w-[240px] w-[794px] max-md:max-w-full block"
+                  loading="lazy"
+                  src={Course?.introVid}
+                  alt="Lesson plan preview"
+                  className="object-contain self-stretch my-auto rounded-2xl aspect-[1.77] min-w-[240px] w-[794px] max-md:max-w-full block"
               />
               <section className="flex flex-col self-stretch my-auto min-w-[240px] max-w-lg-[360px] max-w-sm">
                 <div className="flex flex-col w-full">
@@ -179,24 +191,26 @@ export default function CurseUpsale() {
                   </h3>
                   <div className="flex overflow-hidden flex-col mt-4 w-full text-sm tracking-normal h-[298px]">
                     {lessons.map((lesson, index) => (
-                      <LessonAccordionItem
-                        key={index}
-                        title={lesson.title}
-                        content={lesson.content}
-                        isOpen={lesson.isOpen}
-                      />
+                        <LessonAccordionItem
+                            key={index}
+                            title={lesson.title}
+                            content={lesson.content}
+                            isOpen={lesson.isOpen}
+                        />
                     ))}
                   </div>
                 </div>
                 <Link to={`/checkout?courseId=${courseId}`}>
                   <button
-                    className="gap-1 self-stretch px-8 py-2.5 mt-4 w-full text-sm font-medium leading-loose text-center text-white border border-solid bg-slate-600 border-slate-600 rounded-[50px] max-md:px-5"
-                    aria-label="Purchase lesson plan"
+                      className="gap-1 self-stretch px-8 py-2.5 mt-4 w-full text-sm font-medium leading-loose text-center text-white border border-solid bg-slate-600 border-slate-600 rounded-[50px] max-md:px-5"
+                      aria-label="Purchase lesson plan button"
                   >
                     Buy Now
                   </button>
                 </Link>
               </section>
+              <button onClick={handleBuyNow}>Buy Now</button>
+
             </main>
 
             <main className="flex z-0 flex-wrap flex-1 gap-10 mt-12 size-full max-md:mt-10 max-md:max-w-full">

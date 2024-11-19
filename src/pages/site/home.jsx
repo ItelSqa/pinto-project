@@ -354,31 +354,31 @@ function Home() {
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                 the same page: 
+                  the Same Page: 
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                  my husband's 
+                  My Husband's 
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                  journey 
+                 Journey 
                 </h2>
                 <h2
                   className={`${
-                    isPodacastHover3 ? "text-textPrimary" : "text-[#376489]"
+                    isPodacastHover ?  "text-textPrimary" : "text-[#376489]"
                   } text-[26px] font-montserrat font-bold mb-2 uppercase px-3`}
                 >
-                  into
+                  into 
                 </h2>
                 <h3
                   className={`${
@@ -551,11 +551,11 @@ function Home() {
             onMouseLeave={() => setIsHover(false)}
           >
             <div className="relative">
-            <div
-                className={`absolute left-[50%] -translate-x-[50%] -top-10 w-[75%] leading-[31.69px]   h-[90px] font-bold font-montserrat text-[22px] px-1 uppercase text-center flex items-center justify-center ${
+              <div
+                className={`absolute left-[50%] -translate-x-[50%] -top-10 w-[75%] leading-[31.69px]   h-[90px] font-bold font-montserrat uppercase text-[22px] px-5 text-center flex items-center justify-center ${
                   isHover
-                    ? "bg-[#c2d5e4d3] text-[#274C69]"
-                    : "bg-[#f1e1e4ce] text-[#C1989F]"
+                    ? "bg-[#f1e1e4ce] text-[#C1989F]"
+                    : "bg-[#c2d5e4d3] text-[#274C69]"
                 }`}
               >
                 Keynotes and Presentations
@@ -563,8 +563,8 @@ function Home() {
             </div>
             <img src={offereingOne} alt="" />
             <div
-              className={`flex flex-col justify-between items-center px-4 py-4 bg-[#F1E1E4] w-[90%] mx-auto min-h-96 ${
-                isHover ? "bg-[#c2d5e4d3]" : "bg-[#F1E1E4]"
+              className={`flex flex-col justify-between items-center  px-4 py-4 w-[90%] mx-auto min-h-96 ${
+                isHover ? "text-textPrimary" : "text-[#376489]"
               }`}
             >
               <p className="font-medium text-base leading-[23px]  font-montserrat text-[#274C69]">
@@ -576,8 +576,8 @@ function Home() {
               <button
                 className={`transition ease-in-out delay-60 hover:-translate-y-1 hover:scale-180 uppercase px-10 text-[16px] w-[80%] h-[40px] font-semibold rounded-full mt-3 ${
                   isHover
-                    ? "bg-[#376489] text-[#F1E1E4]"
-                    : "bg-[#C1989F] text-[#F1E1E4]"
+                    ? "bg-[#C1989F] text-[#F1E1E4]"
+                    : "bg-[#376489] text-[#F1E1E4]"
                 }`}
               >
                 Read more
@@ -629,11 +629,11 @@ function Home() {
             onMouseLeave={() => setIsHover3(false)}
           >
             <div className="relative">
-            <div
-                className={`absolute left-[50%] -translate-x-[50%] -top-10 w-[75%] leading-[31.69px]   h-[90px] font-bold font-montserrat text-[22px] px-1 uppercase text-center flex items-center justify-center ${
+              <div
+                className={`absolute left-[50%] -translate-x-[50%] -top-10 w-[75%] leading-[31.69px] uppercase h-[90px] font-bold font-montserrat text-[22px] px-20 text-center flex items-center justify-center ${
                   isHover3
-                    ? "bg-[#c2d5e4d3] text-[#274C69]"
-                    : "bg-[#f1e1e4ce] text-[#C1989F]"
+                    ? "bg-[#f1e1e4ce] text-[#C1989F]"
+                    : "bg-[#c2d5e4d3] text-[#274C69]"
                 }`}
               >
                 Online Courses{" "}
@@ -641,8 +641,8 @@ function Home() {
             </div>
             <img src={offereingTwo} alt="" />
             <div
-              className={`flex flex-col justify-between items-center px-4 py-4 bg-[#F1E1E4] w-[90%] mx-auto min-h-96 ${
-                isHover3 ? "bg-[#c2d5e4d3]" : "bg-[#F1E1E4]"
+              className={`flex flex-col justify-between items-center  px-4 py-4 w-[90%] mx-auto min-h-96 ${
+                isHover3 ? "bg-[#f1e1e4ce]" : "bg-[#C2D5E4]"
               }`}
             >
               <p className="text-[#274C69] font-medium text-base leading-[23px]  font-montserrat">
@@ -654,10 +654,10 @@ function Home() {
                 corporate settings.
               </p>
               <button
-                className={`transition ease-in-out delay-60 hover:-translate-y-1 hover:scale-180 uppercase px-10 text-[16px] w-[80%] h-[40px] font-semibold rounded-full mt-3 ${
+                className={`transition ease-in-out delay-60 hover:-translate-y-1 hover:scale-180 bg-[#376489] px-10 text-[16px] w-[80%] py-2 font-semibold rounded-full text-[#F1E1E4] mt-3 ${
                   isHover3
-                    ? "bg-[#376489] text-[#F1E1E4]"
-                    : "bg-[#C1989F] text-[#F1E1E4]"
+                    ? "bg-[#C1989F] text-[#F1E1E4]"
+                    : "bg-[#376489] text-[#F1E1E4]"
                 }`}
               >
                 READ MORE
@@ -841,3 +841,11 @@ function Home() {
 }
 
 export default Home;
+
+
+// login link:https://wordpress-1273862-4929101.cloudwaysapps.com/platform/#/login
+// username: yapok70871@cironex.com
+// temporary password: 123534
+
+
+// password reset link:https://wordpress-1273862-4929101.cloudwaysapps.com/platform/#/reset-password

@@ -29,6 +29,7 @@ const GlobalAuthWrapper = ({ children }) => {
       "/success",
       "/not-found",
       "/podcast",
+      "/contact",
     ],
     []
   );
